@@ -1,6 +1,5 @@
 const schema = require('./schema');
 const mangoose = require('mongoose');
-const { default: mongoose } = require('mongoose');
 
 const todo = {};
 
