@@ -14,5 +14,21 @@ const initial = async () => {
     console.log('not Connected');
   }
 };
+app.post('/createMongoose', async (req, res) => {
+  let temp = await database.register(req.body);
+  res.send(temp);
+});
+app.post('/readMongoose', async (req, res) => {
+  let temp = await database.login(req.body);
+  res.send(temp);
+});
+app.post('/updateMongoose', async (req, res) => {
+  let temp = await database.update(req.body);
+  res.send(temp);
+});
+app.post('/deleteMongoose', async (req, res) => {
+  let temp = await database.delete(req.body);
+  res.send(temp);
+});
 
 initial();
